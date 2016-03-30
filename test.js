@@ -7,13 +7,6 @@ const parse  = require('./index.js')
 
 
 
-// todo: https://de.wikipedia.org/wiki/Busverkehr_in_Berlin#Sonderlinien_zur_.E2.80.9ELangen_Nacht_der_Museen.E2.80.9C
-// todo: regional
-// todo: suburban
-// todo: RB40
-// todo: RE1
-// todo: bus "F", "M", "B", …
-
 const tests = {
 
 	// subway (ubahn)
