@@ -20,6 +20,7 @@ const parse = (name) => {
 		metro: false, express: false, night: false
 	}
 
+	// weird bus in Berlin
 	if (name === 'TXL') return {
 		type: 'bus', symbol: 'TXL', nr: null,
 		metro: true, express: true, night: true
@@ -28,6 +29,13 @@ const parse = (name) => {
 	// bus & tram lines
 	if (hasSymbol.test(name)) r.symbol = hasSymbol.exec(name)[0]
 	r.nr = parseInt(name.substr((r.symbol || '').length))
+	if (Number.isNaN(r.nr)) r.nr = null
+
+	// weird buses in Brandenburg
+	if (r.symbol && r.symbol.length === name.length) {
+		r.type = 'bus'
+		return r
+	}
 
 	// handle bus & tram lines with symbol
 	     if (r.symbol === 'M') r.metro   = true

@@ -33,6 +33,10 @@ const tests = {
 	, '399':  {t: 'bus',      s: null,  nr: 399,  m: false, x: false, n: false}
 	, '893':  {t: 'bus',      s: null,  nr: 893,  m: false, x: false, n: false}
 
+	// weird buses in Brandenburg
+	, 'A':    {t: 'bus',      s: 'A',   nr: null, m: false, x: false, n: false}
+	, 'W':    {t: 'bus',      s: 'W',   nr: null, m: false, x: false, n: false}
+
 	// metro bus
 	, 'M11':  {t: 'bus',      s: 'M',   nr: 11,   m: true,  x: false, n: false}
 	, 'M85':  {t: 'bus',      s: 'M',   nr: 85,   m: true,  x: false, n: false}
