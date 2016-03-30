@@ -1,0 +1,13 @@
+{
+	"name":         "vbb-parse-line",
+	"description":  "Parse VBB lines like M4, TXL, S42.",
+	"version":      "0.1.0",
+	"main":         "./index.js",
+	"files":        ["./index.js"],
+	"keywords":     ["vbb", "parse", "line", "gtfs", "suburban", "subway", "regional", "tram", "bus", "ferry"],
+	"author":       "Jannis R <mail@jannisr.de>",
+	"homepage":     "https://github.com/derhuerst/vbb-parse-line",
+	"repository":   "git://github.com/derhuerst/vbb-parse-line.git",
+	"license":      "ISC",
+	"engines":      {"node": ">=4"}
+}
