@@ -18,7 +18,20 @@ npm install vbb-parse-line
 
 ```js
 const parse = require('vbb-parse-line')
-parse('M4') // -> todo
+parse('M4')
+```
+
+This will return the following.
+
+```js
+{
+	  type:   'tram' // see https://github.com/derhuerst/vbb-util/blob/475afef/products.js#L108-L117
+	, symbol: 'M'
+	, nr:      4
+	, metro:   true  // buses & trams that run frequently & all day
+	, express: false // buses that skip stations
+	, night: false   // buses replacing other lines in the night
+}
 ```
 
 
