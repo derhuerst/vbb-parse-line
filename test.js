@@ -64,6 +64,7 @@ const tests = {
 for (let name in tests) {
 	let r = parse(name)
 	let e = tests[name]
+	assert.strictEqual(r._,       name)
 	assert.strictEqual(r.type,    e.t, `${name} type: ${r.type} !== ${e.t}`)
 	assert.strictEqual(r.symbol,  e.s, `${name} symbol: ${r.symbol} !== ${e.s}`)
 	assert.strictEqual(r.nr,      e.nr, `${name} nr: ${r.nr} !== ${e.nr}`)

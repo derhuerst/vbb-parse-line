@@ -15,13 +15,13 @@ const types = {
 
 const parse = (name) => {
 	name = name.toUpperCase().replace(spaces, '')
-	let r = {
+	let r = {_: name,
 		type: null, symbol: null, nr: null,
 		metro: false, express: false, night: false
 	}
 
 	// weird bus in Berlin
-	if (name === 'TXL') return {
+	if (name === 'TXL') return {_: name,
 		type: 'bus', symbol: 'TXL', nr: null,
 		metro: true, express: true, night: true
 	}
