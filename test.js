@@ -42,6 +42,10 @@ const tests = {
 	, 'X83':  {t: 'bus',      s: 'X',   nr: 83,   m: false, x: true,  n: false}
 	, 'X7':   {t: 'bus',      s: 'X',   nr: 7,    m: false, x: true,  n: false}
 	, 'TXL':  {t: 'bus',      s: 'TXL', nr: null, m: true,  x: true,  n: true}
+	, 'SXF2': {t: 'bus',      s: 'SXF', nr: 2,    m: false, x: true,  n: false}
+
+	// rail replacement bus
+	, 'SEV':  {t: 'bus',      s: null,  nr: null, m: true,  x: false, n: false}
 
 	// ferry
 	, 'F10':  {t: 'ferry',    s: 'F',   nr: 10,   m: false, x: false, n: false}
@@ -51,13 +55,14 @@ const tests = {
 	, 'S1':   {t: 'suburban', s: 'S',   nr: 1,    m: false, x: false, n: false}
 	, 'S85':  {t: 'suburban', s: 'S',   nr: 85,   m: false, x: false, n: false}
 
-	// regional trains
+	// regional express trains
 	, 'RE1':  {t: 'regional', s: 'RE',  nr: 1,    m: false, x: true,  n: false}
 	, 'RE78': {t: 'regional', s: 'RE',  nr: 78,   m: false, x: true,  n: false}
 
-	// regional express trains
+	// regional trains
 	, 'RB10': {t: 'regional', s: 'RB',  nr: 10,   m: false, x: false, n: false}
 	, 'RB93': {t: 'regional', s: 'RB',  nr: 93,   m: false, x: false, n: false}
+	, 'OE65': {t: 'regional', s: 'OE',  nr: 65,   m: false, x: false, n: false}
 
 }
 

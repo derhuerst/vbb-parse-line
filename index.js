@@ -6,6 +6,7 @@ const hasSymbol = /^([a-z]{1,2})/i
 const types = {
 	  'RE': 'regional'
 	, 'RB': 'regional'
+	, 'OE': 'regional'
 	, 'U':  'subway'
 	, 'S':  'suburban'
 	, 'F':  'ferry'
@@ -24,6 +25,14 @@ const parse = (name) => {
 	if (name === 'TXL') return {_: name,
 		type: 'bus', symbol: 'TXL', nr: null,
 		metro: true, express: true, night: true
+	}
+	if (name === 'SXF2') return {_: name,
+		type: 'bus', symbol: 'SXF', nr: 2,
+		metro: false, express: true, night: false
+	}
+	if (name === 'SEV') return {_: name,
+		type: 'bus', symbol: null, nr: null,
+		metro: true, express: false, night: false
 	}
 
 	// bus & tram lines
