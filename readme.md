@@ -1,10 +1,12 @@
 # *vbb-parse-line*
 
-Parses the names of VBB lines like `M4`, `TXL`, `S42`. [ISC-licensed](license.md).
+**Parses the names of VBB lines like `M4`, `TXL`, `S42`.**
 
 [![npm version](https://img.shields.io/npm/v/vbb-parse-line.svg)](https://www.npmjs.com/package/vbb-parse-line)
 [![build status](https://img.shields.io/travis/derhuerst/vbb-parse-line.svg)](https://travis-ci.org/derhuerst/vbb-parse-line)
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/vbb-parse-line.svg)](https://david-dm.org/derhuerst/vbb-parse-line#info=devDependencies)
+![ISC-licensed](https://img.shields.io/github/license/derhuerst/vbb-parse-line.svg)
+[![gitter channel](https://badges.gitter.im/derhuerst/vbb-rest.svg)](https://gitter.im/derhuerst/vbb-rest)
 
 
 ## Installing
