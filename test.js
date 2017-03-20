@@ -68,6 +68,19 @@ const tests = {
 	, 'RB93': {t: 'regional', s: 'RB',  nr: 93,   m: false, x: false, n: false}
 	, 'OE65': {t: 'regional', s: 'OE',  nr: 65,   m: false, x: false, n: false}
 
+	// national express trains
+	, 'ICE1701': {t: 'express', s: 'ICE', nr: 1701, m: false, x: false, n: false}
+
+	// national night trains
+	, 'EN471': {t: 'express', s: 'EN', nr: 471, m: false, x: false, n: true}
+
+	// national trains
+	, 'IC2073': {t: 'express', s: 'IC', nr: 2073, m: false, x: false, n: false}
+	, 'EC45': {t: 'express', s: 'EC', nr: 45, m: false, x: false, n: false}
+
+	// Locomore
+	, 'LOC1818': {t: 'express', s: 'LOC', nr: 1818, m: false, x: false, n: false}
+
 }
 
 for (let name in tests) {

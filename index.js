@@ -6,7 +6,12 @@ const numberOnly = /^[\d]+$/i
 const symbolAndNumber = /^(([a-z]{1,3})([\d]+)|([\d]+)([a-z]{1,3}))/i
 
 const types = {
-	  'RE': 'regional'
+	  'ICE': 'express'
+	, 'IC': 'express'
+	, 'EC': 'express'
+	, 'EN': 'express'
+	, 'LOC': 'express'
+	, 'RE': 'regional'
 	, 'RB': 'regional'
 	, 'OE': 'regional'
 	, 'U':  'subway'
@@ -68,8 +73,8 @@ const parse = (name) => {
 			r.type = (r.nr <= 17 && r.nr !== 11) ? 'tram' : 'bus'
 	}
 
-	// handle regional express trains
-	if (r.symbol === 'RE') r.express = true
+	if (r.symbol === 'RE') r.express = true // regional express trains
+	else if (r.symbol === 'EN') r.night = true // national night trains
 
 	return r
 }
