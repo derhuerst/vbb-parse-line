@@ -1,7 +1,9 @@
 'use strict'
 
 const spaces = /\s+/g
-const hasSymbol = /^([a-z]{1,2})/i
+const symbolOnly = /^[a-z]{1,3}$/i
+const numberOnly = /^[\d]+$/i
+const symbolAndNumber = /^(([a-z]{1,3})([\d]+)|([\d]+)([a-z]{1,3}))/i
 
 const types = {
 	  'RE': 'regional'
@@ -21,7 +23,7 @@ const parse = (name) => {
 		metro: false, express: false, night: false
 	}
 
-	// weird bus in Berlin
+	// weird buses in Berlin
 	if (name === 'TXL') return {_: name,
 		type: 'bus', symbol: 'TXL', nr: null,
 		metro: true, express: true, night: true
@@ -35,16 +37,23 @@ const parse = (name) => {
 		metro: true, express: false, night: false
 	}
 
-	// bus & tram lines
-	if (hasSymbol.test(name)) r.symbol = hasSymbol.exec(name)[0]
-	r.nr = parseInt(name.substr((r.symbol || '').length))
-	if (Number.isNaN(r.nr)) r.nr = null
-
-	// weird buses in Brandenburg
-	if (r.symbol && r.symbol.length === name.length) {
+	if (symbolOnly.test(name)) {
+		r.symbol = name
 		r.type = 'bus'
-		return r
+	} else if (numberOnly.test(name)) { // bus & tram lines
+		r.nr = parseInt(name)
+	} else {
+		const matches = symbolAndNumber.exec(name)
+		if (matches[2] && matches[3]) {
+			r.symbol = matches[2]
+			r.nr = parseInt(matches[3])
+		} else if (matches[4] && matches[5]) { // night bus somewhere else
+			r.nr = parseInt(matches[4])
+			r.symbol = matches[5]
+		} else throw new Error('houston we have a problem')
 	}
+
+	if (Number.isNaN(r.nr)) r.nr = null
 
 	// handle bus & tram lines with symbol
 	     if (r.symbol === 'M') r.metro   = true
@@ -52,8 +61,8 @@ const parse = (name) => {
 	else if (r.symbol === 'N') r.night   = true
 
 	// handle weird metro bus & metro tram naming
-	r.type = types[r.symbol]
 	if (!r.type) {
+		r.type = types[r.symbol]
 		if (!r.symbol) r.type = r.nr < 100 ? 'tram' : 'bus'
 		else if (r.symbol === 'M')
 			r.type = (r.nr <= 17 && r.nr !== 11) ? 'tram' : 'bus'

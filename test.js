@@ -23,6 +23,8 @@ const tests = {
 	// bus
 	, '100':  {t: 'bus',      s: null,  nr: 100,  m: false, x: false, n: false}
 	, '399':  {t: 'bus',      s: null,  nr: 399,  m: false, x: false, n: false}
+	, '520':  {t: 'bus',      s: null,  nr: 520,  m: false, x: false, n: false}
+	, '771':  {t: 'bus',      s: null,  nr: 771,  m: false, x: false, n: false}
 	, '893':  {t: 'bus',      s: null,  nr: 893,  m: false, x: false, n: false}
 
 	// weird buses in Brandenburg
@@ -33,9 +35,12 @@ const tests = {
 	, 'M11':  {t: 'bus',      s: 'M',   nr: 11,   m: true,  x: false, n: false}
 	, 'M85':  {t: 'bus',      s: 'M',   nr: 85,   m: true,  x: false, n: false}
 
-	// night bus
+	// night bus Berlin
 	, 'N1':   {t: 'bus',      s: 'N',   nr: 1,    m: false, x: false, n: true}
 	, 'N97':  {t: 'bus',      s: 'N',   nr: 97,   m: false, x: false, n: true}
+
+	// night bus somewhere else
+	, '5N':   {t: 'bus',      s: 'N',   nr: 5,    m: false, x: false, n: true}
 
 	// express bus
 	, 'X83':  {t: 'bus',      s: 'X',   nr: 83,   m: false, x: true,  n: false}
