@@ -3,7 +3,8 @@
 const spaces = /\s+/g
 const symbolOnly = /^[a-z]{1,3}$/i
 const numberOnly = /^[\d]+$/i
-const symbolAndNumber = /^(([a-z]{1,3})([\d]+)|([\d]+)([a-z]{1,3}))/i
+const twoNumbers = /^([\d]+)[^\w]([\d]+)$/i
+const symbolAndNumber = /^(([a-z]{1,3})[^\w]?([\d]+)|([\d]+)[^\w]?([a-z]{1,3}))/i
 
 const types = {
 	  'ICE': 'express'
@@ -17,6 +18,8 @@ const types = {
 	, 'U':  'subway'
 	, 'S':  'suburban'
 	, 'F':  'ferry'
+	, 'E':  'bus'
+	, 'H':  'bus'
 	, 'N':  'bus'
 	, 'X':  'bus'
 }
@@ -47,15 +50,20 @@ const parse = (name) => {
 		r.type = 'bus'
 	} else if (numberOnly.test(name)) { // bus & tram lines
 		r.nr = parseInt(name)
+	} else if (twoNumbers.test(name)) { // weird buses in Brandenburg
+		const matches = twoNumbers.exec(name)
+		r.type = 'bus'
+		r.nr = parseInt(matches[1])
 	} else {
 		const matches = symbolAndNumber.exec(name)
-		if (matches[2] && matches[3]) {
+		if (!matches) console.log(name)
+		if (matches && matches[2] && matches[3]) {
 			r.symbol = matches[2]
 			r.nr = parseInt(matches[3])
-		} else if (matches[4] && matches[5]) { // night bus somewhere else
+		} else if (matches && matches[4] && matches[5]) { // night bus somewhere else
 			r.nr = parseInt(matches[4])
 			r.symbol = matches[5]
-		} else throw new Error('houston we have a problem')
+		}
 	}
 
 	if (Number.isNaN(r.nr)) r.nr = null

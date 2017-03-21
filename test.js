@@ -30,6 +30,17 @@ const tests = {
 	// weird buses in Brandenburg
 	, 'A':    {t: 'bus',      s: 'A',   nr: null, m: false, x: false, n: false}
 	, 'W':    {t: 'bus',      s: 'W',   nr: null, m: false, x: false, n: false}
+	, 'E/525': {t: 'bus',     s: 'E',   nr: 525,  m: false, x: false, n: false}
+	, 'H/528': {t: 'bus',     s: 'H',   nr: 528,  m: false, x: false, n: false}
+
+	// night buses in Brandenburg
+	, 'N4':   {t: 'bus',      s: 'N',   nr: 4,    m: false, x: false, n: true}
+
+	// demand-responsive bus in Busverkehr Oder-Spree
+	, '412/2': {t: 'bus',     s: null,  nr: 412,  m: false, x: false, n: false}
+
+	// bus in Cottbus
+	, '15-44': {t: 'bus',     s: null,  nr: 15,   m: false, x: false, n: false}
 
 	// metro bus
 	, 'M11':  {t: 'bus',      s: 'M',   nr: 11,   m: true,  x: false, n: false}
