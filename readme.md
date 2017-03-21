@@ -8,6 +8,8 @@
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/vbb-parse-line.svg)
 [![gitter channel](https://badges.gitter.im/derhuerst/vbb-rest.svg)](https://gitter.im/derhuerst/vbb-rest)
 
+Because this module tries to guess the mode of transport from line names, it is doomed to have conflicts. Right now, it is primarily focused on Berlin, until we have a more robust solution to find out more about lines.
+
 
 ## Installing
 
@@ -27,7 +29,7 @@ This will return the following.
 
 ```js
 {
-	  type:   'tram' // see https://github.com/derhuerst/vbb-util/blob/475afef/products.js#L108-L117
+	  type:   'tram'
 	, symbol: 'M'
 	, nr:      4
 	, metro:   true  // buses & trams that run frequently & all day
