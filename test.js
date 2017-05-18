@@ -95,8 +95,9 @@ const tests = {
 }
 
 for (let name in tests) {
-	let r = parse(name)
-	let e = tests[name]
+	const r = parse(name)
+	const e = tests[name]
+
 	assert.strictEqual(r._,       name)
 	assert.strictEqual(r.type,    e.t, `${name} type: ${r.type} !== ${e.t}`)
 	assert.strictEqual(r.symbol,  e.s, `${name} symbol: ${r.symbol} !== ${e.s}`)
@@ -105,3 +106,6 @@ for (let name in tests) {
 	assert.strictEqual(r.express, e.x, `${name} express: ${r.express} !== ${e.x}`)
 	assert.strictEqual(r.night,   e.n, `${name} night: ${r.night} !== ${e.n}`)
 }
+
+assert.deepStrictEqual(parse('M17'), parse('Bus M17'))
+assert.deepStrictEqual(parse('TXL'), parse('Bus TXL'))
