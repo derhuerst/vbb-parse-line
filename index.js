@@ -57,7 +57,6 @@ const parse = (name) => {
 		r.nr = parseInt(matches[1])
 	} else {
 		const matches = symbolAndNumber.exec(name)
-		if (!matches) console.log(name)
 		if (matches && matches[2] && matches[3]) {
 			r.symbol = matches[2]
 			r.nr = parseInt(matches[3])
