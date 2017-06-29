@@ -73,6 +73,7 @@ const tests = {
 	// regional express trains
 	, 'RE1':  {t: 'regional', s: 'RE',  nr: 1,    m: false, x: true,  n: false}
 	, 'RE78': {t: 'regional', s: 'RE',  nr: 78,   m: false, x: true,  n: false}
+	, 'IRE':  {t: 'regional', s: 'IRE', nr: null, m: false, x: true,  n: false}
 
 	// regional trains
 	, 'RB10': {t: 'regional', s: 'RB',  nr: 10,   m: false, x: false, n: false}

@@ -45,6 +45,10 @@ const parse = (name) => {
 		type: 'bus', symbol: null, nr: null,
 		metro: true, express: false, night: false
 	}
+	if (name === 'IRE') return {_: name,
+		type: 'regional', symbol: 'IRE', nr: null,
+		metro: false, express: true, night: false
+	}
 
 	if (symbolOnly.test(name)) {
 		r.symbol = name
