@@ -110,3 +110,4 @@ for (let name in tests) {
 
 assert.deepStrictEqual(parse('M17'), parse('Bus M17'))
 assert.deepStrictEqual(parse('TXL'), parse('Bus TXL'))
+assert.deepStrictEqual(parse('M2'), parse('Tram M2'))

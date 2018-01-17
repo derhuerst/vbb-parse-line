@@ -1,7 +1,7 @@
 'use strict'
 
 const spaces = /\s+/g
-const bus = /^BUS\s+/g
+const leadingProduct = /^(BUS|TRAM)\s+/g
 const symbolOnly = /^[a-z]{1,3}$/i
 const numberOnly = /^[\d]+$/i
 const twoNumbers = /^([\d]+)[^\w]([\d]+)$/i
@@ -26,7 +26,7 @@ const types = {
 }
 
 const parse = (name) => {
-	name = name.toUpperCase().replace(bus, '').replace(spaces, '')
+	name = name.toUpperCase().replace(leadingProduct, '').replace(spaces, '')
 	let r = {_: name,
 		type: null, symbol: null, nr: null,
 		metro: false, express: false, night: false
