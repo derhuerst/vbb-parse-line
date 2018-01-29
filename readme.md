@@ -29,12 +29,13 @@ This will return the following.
 
 ```js
 {
-	  type:   'tram'
-	, symbol: 'M'
-	, nr:      4
-	, metro:   true  // buses & trams that run frequently & all day
-	, express: false // buses that skip stations
-	, night: false   // buses replacing other lines in the night
+	mode: 'train',
+	product: 'tram',
+	symbol: 'M',
+	nr: 4
+	metro: true  // buses & trams that run frequently & all day
+	express: false // buses that skip stations
+	night: false // buses replacing other lines in the night
 }
 ```
 
