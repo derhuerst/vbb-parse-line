@@ -4,9 +4,9 @@
 
 [![npm version](https://img.shields.io/npm/v/vbb-parse-line.svg)](https://www.npmjs.com/package/vbb-parse-line)
 [![build status](https://img.shields.io/travis/derhuerst/vbb-parse-line.svg)](https://travis-ci.org/derhuerst/vbb-parse-line)
-[![dev dependency status](https://img.shields.io/david/dev/derhuerst/vbb-parse-line.svg)](https://david-dm.org/derhuerst/vbb-parse-line#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/vbb-parse-line.svg)
-[![gitter channel](https://badges.gitter.im/derhuerst/vbb-rest.svg)](https://gitter.im/derhuerst/vbb-rest)
+[![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
+[![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
 
 Because this module tries to guess the mode of transport from line names, it is doomed to have conflicts. Right now, it is primarily focused on Berlin, until we have a more robust solution to find out more about lines.
 
@@ -42,4 +42,4 @@ This will return the following.
 
 ## Contributing
 
-If you **have a question**, **found a bug** or want to **propose a feature**, have a look at [the issues page](https://github.com/derhuerst/vbb-parse-line/issues).
+If you have a question or have difficulties using `vbb-parse-line`, please double-check your code and setup first. If you think you have found a bug or want to propose a feature, refer to [the issues page](https://github.com/derhuerst/vbb-parse-line/issues).

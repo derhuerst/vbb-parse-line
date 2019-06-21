@@ -1,18 +1,33 @@
 {
-	"name":         "vbb-parse-line",
-	"description":  "Parse VBB lines like M4, TXL, S42.",
-	"version":      "0.3.1",
-	"main":         "index.js",
-	"files":        ["index.js"],
-	"keywords":     ["vbb", "parse", "line", "gtfs", "suburban", "subway", "regional", "tram", "bus", "ferry"],
-	"author":       "Jannis R <mail@jannisr.de>",
-	"homepage":     "https://github.com/derhuerst/vbb-parse-line",
-	"repository":   "derhuerst/vbb-parse-line",
-	"bugs":         "https://github.com/derhuerst/vbb-parse-line/issues",
-	"license":      "ISC",
-	"engines":      {"node": ">=6"},
+	"name": "vbb-parse-line",
+	"description": "Parse VBB lines like M4, TXL, S42.",
+	"version": "0.3.1",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"vbb",
+		"parse",
+		"line",
+		"gtfs",
+		"suburban",
+		"subway",
+		"regional",
+		"tram",
+		"bus",
+		"ferry"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/vbb-parse-line",
+	"repository": "derhuerst/vbb-parse-line",
+	"bugs": "https://github.com/derhuerst/vbb-parse-line/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
 	"scripts": {
 		"test": "node test.js",
-		"prepublish": "npm test"
+		"prepublishOnly": "npm test"
 	}
 }
